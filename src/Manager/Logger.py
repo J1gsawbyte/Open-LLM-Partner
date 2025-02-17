@@ -3,23 +3,21 @@ import os
 import json
 import time
 
-current_path = 'd:\\Code\\Project\\AIPartner\\'
+current_path = 'D:\\AI\\Open-LLM-Partner\\'
 
 ColorDic = {
-    'default' : '\033[0m',
+    'white' : '\033[0m',
     'blod' : '\033[1m',
     'underline' : '\033[4m',
     'black' : '\033[30m',
     'red' : '\033[31m',
     'green' : '\033[32m',
-    'yellow' : '\033[33'
-}
+    'yellow' : '\033[33m'
+    }
 
 LogTypeColorDic = {}
 
-def get_color_utf8(
-    color : str, 
-    ) -> str:
+def get_color_utf8(color : str) -> str:
     """通过颜色获取其对应的UTF-8码
     Args:
         color (str): 颜色字符串
@@ -27,8 +25,8 @@ def get_color_utf8(
         str: 带有颜色的字符串
     """
     string = ColorDic.get(color)
-    if len(string) == 0:
-        return ColorDic['default']
+    if string is None:
+        string = get_color_reset_utf8()
     return string
 def get_color_reset_utf8() -> str:
     """获取重置颜色的UTF-8码
