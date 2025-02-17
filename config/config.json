@@ -1,0 +1,11 @@
+{
+    "default-lang" : "zh-cn",
+    "default-logger-output-path" : "output\\",
+    
+    "default-log-type-color" : 
+    {
+        "Info" : "white",
+        "Warn" : "yellow",
+        "Error" : "red"
+    }
+}
