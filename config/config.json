@@ -4,7 +4,7 @@
     
     "default-log-type-color" : 
     {
-        "Info" : "white",
+        "Info" : "default",
         "Warn" : "yellow",
         "Error" : "red"
     }
